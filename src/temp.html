@@ -1,0 +1,443 @@
+<div class="wrapper wrapper-content">
+  <div class="ibox">
+    <div class="ibox-content">
+      <form class="form-inline">
+        <div class="row">
+          <div class="col-sm-6 bottom1em" id="filter-status-div">
+            <div class="btn-group" role="group">
+              <button
+                type="button"
+                class="btn btn-default select-status"
+                data-status="a"
+              >
+                Wszystkie</button
+              ><button
+                type="button"
+                class="btn btn-default select-status active"
+                data-status="1"
+              >
+                Aktywne</button
+              ><button
+                type="button"
+                class="btn btn-default select-status"
+                data-status="2"
+              >
+                Robocze</button
+              ><button
+                type="button"
+                class="btn btn-default select-status"
+                data-status="3"
+              >
+                Archiwalne
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-6" id="footable-search-div">
+            <div class="form-group footable-filtering-search full-width">
+              <label class="sr-only">Search</label>
+              <div class="input-group full-width">
+                <input type="text" class="form-control" placeholder="Szukaj" />
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-primary">
+                    <span class="fooicon fooicon-search"></span></button
+                  ><button
+                    type="button"
+                    class="btn btn-default dropdown-toggle"
+                  >
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li>
+                      <a class="checkbox"
+                        ><label
+                          ><input
+                            type="checkbox"
+                            checked="checked"
+                          />Nazwa</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="checkbox"
+                        ><label
+                          ><input
+                            type="checkbox"
+                            checked="checked"
+                          />Rodzaj</label
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a class="checkbox"
+                        ><label
+                          ><input type="checkbox" checked="checked" />Osoba
+                          Odpowiedzialna</label
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="clear"></div>
+      <div class="row" style="margin-top: 10px">
+        <div class="col-md-12">
+          <div class="pull-right">
+            <button
+              type="button"
+              class="btn-sm btn-default pageS active"
+              data-page-size="10"
+            >
+              10</button
+            ><button
+              type="button"
+              class="btn-sm btn-default pageS"
+              data-page-size="20"
+            >
+              20</button
+            ><button
+              type="button"
+              class="btn-sm btn-default pageS"
+              data-page-size="50"
+            >
+              50</button
+            ><button
+              type="button"
+              class="btn-sm btn-default pageS"
+              data-page-size="100"
+            >
+              100
+            </button>
+          </div>
+        </div>
+      </div>
+      <table
+        id="main-table"
+        data-state="true"
+        class="table table-hover full-width footable footable-1 footable-filtering footable-filtering-right footable-paging footable-paging-center breakpoint-lg"
+        style="display: table"
+      >
+        <thead>
+          <tr class="footable-filtering">
+            <th colspan="5"><form class="form-inline"></form></th>
+          </tr>
+          <tr class="footable-header">
+            <th
+              class="footable-sortable footable-first-visible footable-asc"
+              style="display: table-cell"
+            >
+              Nazwa<span class="fooicon fooicon-sort-asc"></span>
+            </th>
+            <th class="footable-sortable" style="display: table-cell">
+              Status<span class="fooicon fooicon-sort"></span>
+            </th>
+            <th class="footable-sortable" style="display: table-cell">
+              Rodzaj<span class="fooicon fooicon-sort"></span>
+            </th>
+            <th class="footable-sortable" style="display: table-cell">
+              Osoba Odpowiedzialna<span class="fooicon fooicon-sort"></span>
+            </th>
+            <th
+              class="text-right footable-last-visible"
+              style="display: table-cell"
+            ></th>
+          </tr>
+        </thead>
+        <tfoot></tfoot>
+        <tbody>
+          <tr>
+            <td style="display: table-cell" class="footable-first-visible">
+              <b><a href="/aktywa/nosnik/11/">Dysk HDD nr 1</a></b>
+            </td>
+            <td style="display: table-cell">
+              <span class="badge badge-primary">aktywny</span>
+            </td>
+            <td style="display: table-cell">Dysk twardy stacji roboczej</td>
+            <td style="display: table-cell"></td>
+            <td
+              class="text-right footable-last-visible"
+              style="display: table-cell"
+            >
+              <div class="btn-group">
+                <button
+                  data-toggle="dropdown"
+                  class="btn btn-white btn-sm dropdown-toggle"
+                  type="button"
+                >
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <a href="/aktywa/nosnik/11/" target="_self"
+                      ><span class="fa fa-eye"></span> Szczegóły</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/aktywa/nosnik/11/edycja" target="_self"
+                      ><span class="fa fa-edit"></span> Edycja</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_self"
+                      data-toggle="modal"
+                      data-target="#modalUsun"
+                      data-object-id="11"
+                      ><span class="fa fa-trash"></span> Usuń</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="display: table-cell" class="footable-first-visible">
+              <b
+                ><a href="/aktywa/nosnik/9/"
+                  >Macierz dyskowa nr ewidencyjny 01</a
+                ></b
+              >
+            </td>
+            <td style="display: table-cell">
+              <span class="badge badge-primary">aktywny</span>
+            </td>
+            <td style="display: table-cell">Dysk twardy / macierz serwera</td>
+            <td style="display: table-cell">
+              <a href="/organizacja/osoba/53/">Czarek Czarnecki</a>
+            </td>
+            <td
+              class="text-right footable-last-visible"
+              style="display: table-cell"
+            >
+              <div class="btn-group">
+                <button
+                  data-toggle="dropdown"
+                  class="btn btn-white btn-sm dropdown-toggle"
+                  type="button"
+                >
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <a href="/aktywa/nosnik/9/" target="_self"
+                      ><span class="fa fa-eye"></span> Szczegóły</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/aktywa/nosnik/9/edycja" target="_self"
+                      ><span class="fa fa-edit"></span> Edycja</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_self"
+                      data-toggle="modal"
+                      data-target="#modalUsun"
+                      data-object-id="9"
+                      ><span class="fa fa-trash"></span> Usuń</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="display: table-cell" class="footable-first-visible">
+              <b><a href="/aktywa/nosnik/12/">Macierz nr 2</a></b>
+            </td>
+            <td style="display: table-cell">
+              <span class="badge badge-primary">aktywny</span>
+            </td>
+            <td style="display: table-cell">Dysk twardy / macierz serwera</td>
+            <td style="display: table-cell"></td>
+            <td
+              class="text-right footable-last-visible"
+              style="display: table-cell"
+            >
+              <div class="btn-group">
+                <button
+                  data-toggle="dropdown"
+                  class="btn btn-white btn-sm dropdown-toggle"
+                  type="button"
+                >
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <a href="/aktywa/nosnik/12/" target="_self"
+                      ><span class="fa fa-eye"></span> Szczegóły</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/aktywa/nosnik/12/edycja" target="_self"
+                      ><span class="fa fa-edit"></span> Edycja</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_self"
+                      data-toggle="modal"
+                      data-target="#modalUsun"
+                      data-object-id="12"
+                      ><span class="fa fa-trash"></span> Usuń</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="display: table-cell" class="footable-first-visible">
+              <b><a href="/aktywa/nosnik/10/">Pendrive #123456</a></b>
+            </td>
+            <td style="display: table-cell">
+              <span class="badge badge-primary">aktywny</span>
+            </td>
+            <td style="display: table-cell">Pendrive</td>
+            <td style="display: table-cell">
+              <a href="/organizacja/osoba/54/">Dariusz Darecki</a>
+            </td>
+            <td
+              class="text-right footable-last-visible"
+              style="display: table-cell"
+            >
+              <div class="btn-group">
+                <button
+                  data-toggle="dropdown"
+                  class="btn btn-white btn-sm dropdown-toggle"
+                  type="button"
+                >
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <a href="/aktywa/nosnik/10/" target="_self"
+                      ><span class="fa fa-eye"></span> Szczegóły</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/aktywa/nosnik/10/edycja" target="_self"
+                      ><span class="fa fa-edit"></span> Edycja</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_self"
+                      data-toggle="modal"
+                      data-target="#modalUsun"
+                      data-object-id="10"
+                      ><span class="fa fa-trash"></span> Usuń</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="display: table-cell" class="footable-first-visible">
+              <b><a href="/aktywa/nosnik/54/">Pendrive 11</a></b>
+            </td>
+            <td style="display: table-cell">
+              <span class="badge badge-primary">aktywny</span>
+            </td>
+            <td style="display: table-cell">Dysk przenośny</td>
+            <td style="display: table-cell">
+              <a href="/organizacja/osoba/52/">Barbara Barbarska</a>
+            </td>
+            <td
+              class="text-right footable-last-visible"
+              style="display: table-cell"
+            >
+              <div class="btn-group">
+                <button
+                  data-toggle="dropdown"
+                  class="btn btn-white btn-sm dropdown-toggle"
+                  type="button"
+                >
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <a href="/aktywa/nosnik/54/" target="_self"
+                      ><span class="fa fa-eye"></span> Szczegóły</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/aktywa/nosnik/54/edycja" target="_self"
+                      ><span class="fa fa-edit"></span> Edycja</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_self"
+                      data-toggle="modal"
+                      data-target="#modalUsun"
+                      data-object-id="54"
+                      ><span class="fa fa-trash"></span> Usuń</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="display: table-cell" class="footable-first-visible">
+              <b><a href="/aktywa/nosnik/16/">Pendrive xYZ</a></b>
+            </td>
+            <td style="display: table-cell">
+              <span class="badge badge-primary">aktywny</span>
+            </td>
+            <td style="display: table-cell">Pendrive</td>
+            <td style="display: table-cell">
+              <a href="/organizacja/osoba/136/">Piotr Juzoń</a>
+            </td>
+            <td
+              class="text-right footable-last-visible"
+              style="display: table-cell"
+            >
+              <div class="btn-group">
+                <button
+                  data-toggle="dropdown"
+                  class="btn btn-white btn-sm dropdown-toggle"
+                  type="button"
+                >
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <a href="/aktywa/nosnik/16/" target="_self"
+                      ><span class="fa fa-eye"></span> Szczegóły</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/aktywa/nosnik/16/edycja" target="_self"
+                      ><span class="fa fa-edit"></span> Edycja</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      target="_self"
+                      data-toggle="modal"
+                      data-target="#modalUsun"
+                      data-object-id="16"
+                      ><span class="fa fa-trash"></span> Usuń</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

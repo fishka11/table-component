@@ -1,0 +1,110 @@
+.clients-list .tab-pane {
+  height: inherit;
+}
+
+.label-red {
+  background-color: #ff6961;
+  color: #fff;
+}
+.label-orange {
+  background-color: #ffb347;
+  color: #fff;
+}
+.label-yellow {
+  background-color: #fdfd96;
+  color: #000;
+}
+.label-green {
+  background-color: #77dd77;
+  color: #030;
+}
+.label-darkgreen {
+  background-color: #03c03c;
+  color: #fff;
+}
+.label-brown {
+  background-color: #836953;
+  color: #fff;
+}
+.label-blue {
+  background-color: #aec6cf;
+  color: #fff;
+}
+.label-bluemagenta {
+  background-color: #cb99c9;
+  color: #fff;
+}
+.label-magenta {
+  background-color: #f49ac2;
+  color: #fff;
+}
+
+span.colorpicker {
+  cursor: pointer;
+  line-height: 2.5em;
+}
+span.colorpicker span {
+  padding: 5px;
+}
+.big-checkbox .checkbox {
+  font-size: 1.25em;
+}
+
+/* Nadpisujemy dl.dl-horizontal - wszystkim dajemy odstÄp na dole 1em, bo to co jest standarowo jest zbyt ciasne */
+dl.dl-horizontal dd {
+  margin-bottom: 0.5em;
+}
+
+/* Potrzebne ze wzglÄdu na bĹÄdny rendering select2 w tabach bootstrap */
+.select2 {
+  width: 100% !important;
+}
+
+/* Minimalna szerokoĹÄ dla kolumn w tabelach, Ĺźeby nie byĹy wiÄksze niĹź szerokoĹÄ elementu wewn. */
+.min-width {
+  width: 1%;
+  white-space: nowrap;
+}
+
+/* OdstÄp na dole - przydaje siÄ przy przyciskach i elementach formularza, Ĺźeby siÄ nie stykaĹy w pionie
+   po dostosowaniu do mniejszego rozmiaru */
+.bottom1em {
+  padding-bottom: 1em;
+}
+
+/* Poprawka do styli clockpicker - z-index jest zbyt niski i clockpicker wyĹwietla siÄ pod modalem, zamiast nad */
+.clockpicker-popover {
+  z-index: 999999 !important;
+}
+
+/* Poprawka dla styli multiselect chosen - tak, aby placeholder byĹ w peĹni widoczny (widaÄ tylko parÄ pierwszych liter) */
+li.search-field {
+  width: 100%;
+}
+li.search-field input.default {
+  width: auto !important;
+}
+
+/*
+@Wojtek: JeĹźeli bÄdziesz chciaĹ to przywrĂłciÄ, to skontaktuj siÄ wczeĹniej;
+JeĹźeli masz jakiĹ przypadek do obsĹuĹźenia to zrĂłb dedykowane klasy, bo nadpisywanie
+klas chosen rozwala to w wielu miejscach
+
+.chosen-container, .chosen-drop, .chosen-drop .chosen-search, .chosen-drop {
+  width: 876.66px !important;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+.chosen-search input {
+    width: 876.66px !important;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+.chosen-container { width:876.66px !important; }
+*/
